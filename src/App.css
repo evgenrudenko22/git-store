@@ -16,6 +16,7 @@ body, html {
     flex: 1;
     height: 100%;
     width: 100%;
+    background: linear-gradient(to right, #00b4db, #0083b0);
 }
 
 .sidebar {
@@ -141,4 +142,9 @@ button:disabled {
     background-color: #ccc; /* Сірий фон для вимкненої кнопки */
     color: #666; /* Сірий текст */
     cursor: not-allowed; /* Курсор заборони */
+}
+
+input {
+    margin-right: 10px;
+    padding: 5px;
 }

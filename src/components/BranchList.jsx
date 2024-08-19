@@ -1,21 +1,20 @@
-import React from "react";
+import React from 'react';
 
-const BranchList = ({ onSelect }) => {
-    const branches = ["main", "prerelease", "debug"]
-
-    return (
-        <div id="branch_list">
-            <ul>
-                {branches.map((branch) => (
-                    <li key={branch}>
-                        <a href="#" onclick={() => onSelect(branch)}>
-                            {branch}
-                        </a>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    )
+function BranchList({ branches, onSelect }) {
+  return (
+    <div className="branch-list">
+      <h2>Branches</h2>
+      <ul>
+        {branches.map((branch, index) => (
+          <li key={index}>
+            <a href="#" onClick={() => onSelect(branch.trim())}>
+              {branch}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
-export default BranchList
+export default BranchList;
