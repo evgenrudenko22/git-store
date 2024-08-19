@@ -1,0 +1,144 @@
+#root {
+    width: 100%;
+    height: 100vh;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#app {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    transition: width 0.3s;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    background-color: #444;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+.sidebar a:active {
+    background-color: #666;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#branch-list {
+    margin-top: 20px;
+}
+
+#branch-list a {
+    color: #007BFF; /* Синій колір для посилань у списку гілок */
+}
+
+#branch-list a:hover {
+    color: #0056b3; /* Темніший синій при наведенні */
+}
+
+#branch-list a:active {
+    color: #003d7a; /* Ще темніший синій при натисканні */
+}
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
+
+a {
+    color: #4CAF50; /* Зелений колір тексту */
+    text-decoration: none; /* Прибрати підкреслення */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #45a049; /* Трохи темніший зелений при наведенні */
+}
+
+a:active {
+    color: #2e7031; /* Темніший зелений при натисканні */
+}
+
+button {
+    background-color: #4CAF50; /* Зелений колір фону */
+    color: white; /* Білий колір тексту */
+    padding: 10px 20px; /* Внутрішні відступи */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Згладжені кути */
+    cursor: pointer; /* Курсор як для кнопки */
+    font-size: 16px; /* Розмір шрифту */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавний перехід кольору і трансформації */
+}
+
+button:hover {
+    background-color: #45a049; /* Трохи темніший зелений при наведенні */
+    transform: scale(1.05); /* Легке збільшення кнопки при наведенні */
+}
+
+button:active {
+    background-color: #2e7031; /* Темніший зелений при натисканні */
+    transform: scale(0.98); /* Легке зменшення кнопки при натисканні */
+}
+
+button:disabled {
+    background-color: #ccc; /* Сірий фон для вимкненої кнопки */
+    color: #666; /* Сірий текст */
+    cursor: not-allowed; /* Курсор заборони */
+}
